@@ -2,6 +2,7 @@
 
 ## Summary
 A REST API implementation in NodeJS with a MongoDB back-end.
+
 Technologies used:
 - express
 - mongoose
@@ -10,12 +11,16 @@ Technologies used:
 The API is implemented under the route: `/api`.
 
 Documents are structured as:
+```
 {
   "name": "A name",
   "data": {
-    "dataKey": "dataValue"
+    "dataKey": "dataValue",
+    ...
   }
-}
+},
+...
+```
 
 The supported HTTP requests are:
 - GET `Retrieve the entire collection`
@@ -24,7 +29,8 @@ The supported HTTP requests are:
 sample POST data: {
   "name": "A name"
   "data": {
-    "dataKey": "dataValue", ...
+    "dataKey": "dataValue",
+    ...
   }
 }
 ```
@@ -34,9 +40,11 @@ sample PUT data: [
 {
   "name": "A name"
   "data": {
-    "dataKey": "dataValue", ...
+    "dataKey": "dataValue",
+    ...
   }
-}, ...
+},
+...
 ]
 ```
 - DELETE `Remove the entire collection`
