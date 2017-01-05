@@ -50,6 +50,9 @@ sample PUT data: [
 - DELETE `Remove the entire collection`
 
 ## Usage
+`npm install` once
+`npm start` to start the server
+
 - GET `curl -i -H Accept:application/json -X GET http://localhost:3000/api`
 - POST `curl -i -H Accept:application/json -X POST http://localhost:3000/api -H Content-Type: application/json -d '{ "name": "A name", "data": { "dataKey": "dataValue" }}'`
 - PUT `curl -i -H Accept:application/json -X PUT http://localhost:3000/api -H Content-Type: application/json -d '[{ "name": "A name", "data": { "dataKey": "dataValue" }}]'`
