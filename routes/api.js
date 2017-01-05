@@ -5,7 +5,9 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
   var p = db.get();
   p.then(function (data) {
-    res.json(data);
+    res.json({
+      response: data
+    });
   }, function (error) {
     res.json({
       error: error
@@ -16,7 +18,9 @@ router.get('/', function (req, res, next) {
 router.post('/', function (req, res, next) {
   var p = db.post(req.body);
   p.then(function (data) {
-    res.json(data);
+    res.json({
+      response: data
+    });
   }, function (error) {
     res.json({
       error: error
@@ -27,7 +31,9 @@ router.post('/', function (req, res, next) {
 router.put('/', function (req, res, next) {
   var p = db.put(req.body);
   p.then(function (data) {
-    res.json(data);
+    res.json({
+      response: data
+    });
   }, function (error) {
     res.json({
       error: error
@@ -38,7 +44,9 @@ router.put('/', function (req, res, next) {
 router.delete('/', function (req, res, next) {
   var p = db.delete();
   p.then(function (data) {
-    res.json(data);
+    res.json({
+      response: data
+    });
   }, function (error) {
     res.json({
       error: error
